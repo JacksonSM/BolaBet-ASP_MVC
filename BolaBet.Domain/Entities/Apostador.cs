@@ -25,12 +25,12 @@ namespace BolaBet.Domain.Entities
 
             DomainExceptionValidation.When(string.IsNullOrEmpty(usuario),
                "Usuário inválido. Usuario é obrigatório");
-            DomainExceptionValidation.When(nome.Length > 30,
+            DomainExceptionValidation.When(usuario.Length > 30,
                 "Usuário muito longo. É permitido no máximo 30 caracteres"); 
             
             DomainExceptionValidation.When(string.IsNullOrEmpty(senha),
                "Senha inválido. Senha é obrigatório");
-            DomainExceptionValidation.When(nome.Length > 8,
+            DomainExceptionValidation.When(senha.Length > 8,
                 "Senha muito longo. É permitido no máximo 8 caracteres");
 
             Nome = nome;

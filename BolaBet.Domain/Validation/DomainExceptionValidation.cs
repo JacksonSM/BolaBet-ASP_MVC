@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace BolaBet.Domain.Validation
 {
-    public class DomainExceptionValidation : ApplicationException
+    public class DomainExceptionValidation : Exception
     {
         public DomainExceptionValidation(string message) : base(message)
         {
         }
-        public static void When(bool hasError, string message)
+        public static void When(bool hasError, string error)
         {
             if (hasError)
             {
-                throw new DomainExceptionValidation(message);
+                throw new DomainExceptionValidation(error);
             }
         }
 
