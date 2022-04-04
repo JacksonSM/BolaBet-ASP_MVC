@@ -9,11 +9,11 @@ namespace BolaBet.Domain.Interfaces
 {
     public interface IApostadorRepository
     {
-        Task<IEnumerable<Apostador>> GetCategories();
-        Task<Apostador> GetById(int? id);
+        Task<IEnumerable<Apostador>> GetCategoriesAsync();
+        Task<Apostador> GetByIdAsync(int? id);
 
-        Task<Apostador> Create(Apostador apostador);
-        Task<Apostador> Update(Apostador apostador);
-        Task<Apostador> Remove(Apostador apostador);
+        Task CreateAsync(Apostador apostador);
+        Task UpdateAsync(Apostador apostador);
+        Task RemoveAsync(Apostador apostador);
     }
 }

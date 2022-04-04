@@ -1,6 +1,7 @@
 ﻿using BolaBet.Domain.Entities;
 using BolaBet.Domain.Interfaces;
 using BolaBet.Infra.Data.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,29 +19,32 @@ namespace BolaBet.Infra.Data.Repositories
             _context = context;
         }
 
-        public Task<Apostador> Create(Apostador apostador)
+        public async Task CreateAsync(Apostador apostador)
         {
-            throw new NotImplementedException();
+            _context.Add(apostador);
+            await _context.SaveChangesAsync();
         }
 
-        public Task<Apostador> GetById(int? id)
+        public async Task<Apostador> GetByIdAsync(int? id)
         {
-            throw new NotImplementedException();
+            return await _context.Apostadores.FindAsync(id);
         }
 
-        public Task<IEnumerable<Apostador>> GetCategories()
+        public async Task<IEnumerable<Apostador>> GetCategoriesAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Apostadores.ToListAsync();
         }
 
-        public Task<Apostador> Remove(Apostador apostador)
+        public async Task RemoveAsync(Apostador apostador)
         {
-            throw new NotImplementedException();
+            _context.Remove(apostador);
+            await _context.SaveChangesAsync();
         }
 
-        public Task<Apostador> Update(Apostador apostador)
+        public async Task UpdateAsync(Apostador apostador)
         {
-            throw new NotImplementedException();
+            _context.Update(apostador);
+            await _context.SaveChangesAsync();
         }
     }
 }
