@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BolaBet.WebUI", "BolaBet.We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BolaBet.Domain.Tests", "BolaBet.Domain.Tests\BolaBet.Domain.Tests.csproj", "{6DBDBBAA-C01D-406F-8FE1-11F134CF7C77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaBet.Infra.Data", "BolaBet.Infra.Data\BolaBet.Infra.Data.csproj", "{3E25A07F-6FCB-40F2-8621-76C9E941F0CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BolaBet.Infra.Data", "BolaBet.Infra.Data\BolaBet.Infra.Data.csproj", "{3E25A07F-6FCB-40F2-8621-76C9E941F0CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaBet.Infra.IoC", "BolaBet.Infra.IoC\BolaBet.Infra.IoC.csproj", "{8F3330DB-854A-4050-8C78-7B52C3F133A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3E25A07F-6FCB-40F2-8621-76C9E941F0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E25A07F-6FCB-40F2-8621-76C9E941F0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E25A07F-6FCB-40F2-8621-76C9E941F0CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F3330DB-854A-4050-8C78-7B52C3F133A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F3330DB-854A-4050-8C78-7B52C3F133A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F3330DB-854A-4050-8C78-7B52C3F133A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F3330DB-854A-4050-8C78-7B52C3F133A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
