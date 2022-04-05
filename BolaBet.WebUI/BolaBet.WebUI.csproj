@@ -10,8 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BolaBet.Domain\BolaBet.Domain.csproj" />
-    <ProjectReference Include="..\BolaBet.Infra.Data\BolaBet.Infra.Data.csproj" />
     <ProjectReference Include="..\BolaBet.Infra.IoC\BolaBet.Infra.IoC.csproj" />
   </ItemGroup>
 
