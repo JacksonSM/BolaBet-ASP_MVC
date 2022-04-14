@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BolaBet.Application.Entities
-{
-    class Campeonato
+namespace BolaBet.API.EntitiesMatchesAPI { 
+    public class Placar
     {
+
     }
 }

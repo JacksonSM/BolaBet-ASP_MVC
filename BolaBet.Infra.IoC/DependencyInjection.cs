@@ -1,6 +1,10 @@
-﻿using BolaBet.Domain.Interfaces;
+﻿using BolaBet.Application.Interface;
+using BolaBet.Application.Services;
+using BolaBet.Domain.Interfaces;
 using BolaBet.Infra.Data.Context;
 using BolaBet.Infra.Data.Repositories;
+
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,7 +24,13 @@ namespace BolaBet.Infra.IoC
         {
             services.AddScoped<IApostadorRepository, ApostadorRepository>();
             return services;
+        } 
+        public static IServiceCollection ServiceDependence(IServiceCollection services)
+        {
+            services.AddScoped<IMatchesService, MatchesService>();
+            return services;
         }
+
         
     }
 }

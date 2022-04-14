@@ -6,21 +6,23 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using BolaBet.Application.Interface;
 
 namespace BolaBet.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IMatchesService _matchesService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IMatchesService matchesService)
         {
-            _logger = logger;
+            _matchesService = matchesService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var model = await _matchesService.GetMatchesAsync();
+            return View(model);
         }
 
         public IActionResult Privacy()

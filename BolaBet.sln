@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BolaBet.Infra.Data", "BolaB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BolaBet.Infra.IoC", "BolaBet.Infra.IoC\BolaBet.Infra.IoC.csproj", "{8F3330DB-854A-4050-8C78-7B52C3F133A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaBet.Application", "BolaBet.Application\BolaBet.Application.csproj", "{7FE355FE-8133-4085-9433-7E387A560F02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BolaBet.Application", "BolaBet.Application\BolaBet.Application.csproj", "{7FE355FE-8133-4085-9433-7E387A560F02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

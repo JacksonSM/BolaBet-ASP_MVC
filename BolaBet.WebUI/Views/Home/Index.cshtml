@@ -1,4 +1,6 @@
-﻿@{
+﻿@model BolaBet.Application.EntitiesMatchesApi.Welcome
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -23,15 +25,16 @@
 
     <tbody>
 
-     
+        @foreach (var item in Model.Matches)
+        {
 
             <tr>
                 <td>
-                    (DATA E HORA)
+                    @Html.DisplayFor(modelItem => item.UtcDate)
                 </td>
            
                 <td>
-                    (TIMES)
+                    @Html.DisplayFor(modelItem => item.HomeTeam.Name) x @Html.DisplayFor(modelItem => item.AwayTeam.Name)
                 </td>
                 <td>
                     <button type="button" class="btn btn-secondary">1,50</button>
@@ -46,8 +49,8 @@
                     <button type="button" class="btn btn-primary">2,50</button>
                 </td>
             </tr>
+        }
 
-        
     </tbody>
 
 </table>

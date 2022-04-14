@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BolaBet.Application\BolaBet.Application.csproj" />
     <ProjectReference Include="..\BolaBet.Domain\BolaBet.Domain.csproj" />
     <ProjectReference Include="..\BolaBet.Infra.Data\BolaBet.Infra.Data.csproj" />
   </ItemGroup>
