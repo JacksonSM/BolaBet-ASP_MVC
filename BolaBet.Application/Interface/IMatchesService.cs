@@ -1,4 +1,5 @@
-﻿using BolaBet.Application.EntitiesMatchesApi;
+﻿using BolaBet.Application.Entities;
+using BolaBet.Application.EntitiesMatchesApi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,6 @@ namespace BolaBet.Application.Interface
     public interface IMatchesService
     {
         Task<Welcome> GetMatchesAsync();
+        Task<List<CompetitionsMatches>> GetCompetitionsMatchesAsync();
     }
 }

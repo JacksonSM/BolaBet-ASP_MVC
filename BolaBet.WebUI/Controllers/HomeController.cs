@@ -21,8 +21,12 @@ namespace BolaBet.WebUI.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var model = await _matchesService.GetMatchesAsync();
-            return View(model);
+            var competitionsMatches = await _matchesService.GetCompetitionsMatchesAsync();
+            //CompetitionsMatches competitionsMatches = new CompetitionsMatches(matches.Matches.ToList());
+            //competitionsMatches.PovoaCompetitions();
+            //ViewBag.Lista(competitionsMatches);
+       
+            return View(competitionsMatches);
         }
 
         public IActionResult Privacy()

@@ -13,5 +13,9 @@ namespace BolaBet.Application.APIRequest
         [Get("/v2/matches")]
         [Headers("X-Auth-Token: e88aa0504ecb4575bbfab26a2ec6ab7f")]
         Task<Welcome> GetMatchesAsync();
+        
+        [Get("/v2/competitions/")]
+        [Headers("X-Auth-Token: e88aa0504ecb4575bbfab26a2ec6ab7f")]
+        Task<Competition[]> GetCompetitionsAsync();
     }
 }

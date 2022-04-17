@@ -13,7 +13,7 @@ namespace BolaBet.Application.EntitiesMatchesApi
         [JsonProperty("role")]
         public string Role { get; set; }
 
-        [JsonProperty("nationality")]
-        public Nationality? Nationality { get; set; }
+        //[JsonProperty("nationality")]
+        //public Nationality? Nationality { get; set; }
     }
 }

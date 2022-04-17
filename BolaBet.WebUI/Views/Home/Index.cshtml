@@ -1,56 +1,73 @@
-﻿@model BolaBet.Application.EntitiesMatchesApi.Welcome
+﻿@model List<BolaBet.Application.Entities.CompetitionsMatches>
 
 @{
     ViewData["Title"] = "Home Page";
+    var aux = 1;   
 }
 
 
+@foreach (var itemCampetition in Model)
+{
+    <table class="table table-striped table-hover">
+        <thead>
 
-<table class="table table-striped table-hover">
-    <thead>
+            <tr class="success">
+                <th>
+                    @Html.DisplayFor(modelItem => itemCampetition.Competitions.Name) 
+                </th>
+                @if (aux == 1)
+                {
+                    aux++;
+                    <th> </th>
+                    <th>Casa</th>
+                    <th>Empate</th>
+                    <th>Fora</th>
+                    <th>Ambas</th>
+                }
 
-        <tr class="success">
-            <th>
-                Brasileirão Série A
-            </th>
-            <th> </th>
-            <th>Casa</th>
-            <th>Empate</th>
-            <th>Fora</th>
-            <th>Ambas</th>
-            
-            
-        </tr>
-    </thead>
 
-    <tbody>
-
-        @foreach (var item in Model.Matches)
-        {
-
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UtcDate)
-                </td>
-           
-                <td>
-                    @Html.DisplayFor(modelItem => item.HomeTeam.Name) x @Html.DisplayFor(modelItem => item.AwayTeam.Name)
-                </td>
-                <td>
-                    <button type="button" class="btn btn-secondary">1,50</button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-primary">3,00</button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-secondary">3,50</button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-primary">2,50</button>
-                </td>
             </tr>
-        }
+        </thead>
 
-    </tbody>
+        <tbody>
 
-</table>
+            @foreach (var itemMatch in itemCampetition.Matches)
+            {
+
+                <tr>
+                    <td>
+                        @if (itemMatch.Status.Equals("FINISHED"))
+                        {
+                            @Html.DisplayFor(modelItem => itemMatch.Status)
+                        }
+                        else
+                        {
+                            string dataHora = itemMatch.UtcDate.LocalDateTime.ToString("dd/MM/yyyy hh:mm tt", System.Globalization.CultureInfo.GetCultureInfo("pt-BR"));
+                            @Html.DisplayFor(modelItem => dataHora)
+                        }
+
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => itemMatch.HomeTeam.Name) x @Html.DisplayFor(modelItem => itemMatch.AwayTeam.Name)
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-secondary">1,50</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary">3,00</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-secondary">3,50</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary">2,50</button>
+                    </td>
+                </tr>
+
+            }
+
+        </tbody>
+
+    </table>
+}
